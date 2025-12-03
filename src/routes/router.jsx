@@ -3,21 +3,21 @@ import HomeLayout from "../layouts/HomeLayout";
 import Home from "../pages/Home";
 import CategoryNews from "../pages/CategoryNews";
 
-
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout></HomeLayout>,
-    children:[
+    children: [
       {
-        path:"",
-        element: <Home></Home>
+        path: "",
+        element: <Home></Home>,
       },
       {
-        path:"/category/:id",
-        element: <CategoryNews></CategoryNews>
-      }
-    ]
+        path: "/category/:id",
+        element: <CategoryNews></CategoryNews>,
+        loader: () => fetch("/news.json")
+      },
+    ],
   },
   {
     path: "/auth",
