@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
-import RighAside from "../components/homelayout/RighAside";
+
 import NewsDetailsCard from "../components/NewsDetailsCard";
 import { useLoaderData, useParams } from "react-router";
+import RighAside from "../components/homeLayout/RighAside";
 
 const NewsDetails = () => {
   const data = useLoaderData();
