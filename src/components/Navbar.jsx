@@ -4,10 +4,10 @@ import { Link, NavLink } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
-  const { user, logout } = use(AuthContext);
+  const { user, logOut } = use(AuthContext);
   const handleLogout = () => {
-    console.log("user trying to LogOut");
-    logout()
+    // console.log("user trying to LogOut");
+    logOut()
       .then(() => {
         alert("You Logged Out successfully");
       })
