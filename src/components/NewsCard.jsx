@@ -2,7 +2,7 @@ import { FaEye, FaStar, FaShareAlt, FaRegBookmark } from "react-icons/fa";
 import { Link } from "react-router";
 
 const NewsCard = ({ news }) => {
-  const { id, title, author, thumbnail_url, details, rating, total_view, tags } =
+  const { id, title, author, thumbnail_url, details, rating, total_view,  } =
     news;
 
   const formattedDate = new Date(
